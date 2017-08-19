@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>TwitchTV App</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" rel="stylesheet">
+        <link rel='stylesheet' href='style.css'> <!-- local css -->
+        <script src="https://use.fontawesome.com/ae92de56e8.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    
+    </head>
+
+    <body>
+
+        <div class='container'>
+  
+            <h2 class='text-center'>Your TwitchTV Channels</h2>
+
+            <div class="row center-block">
+    
+                <div class='col-md-3 col-sm-3 col-xs-3'></div>
+    
+                <div class='col-md-6 text-center col-sm-5 col-xs-6'>
+                    <div class='form-inline search-box'>
+                        <label class="sr-only" for='streamerSearch'>Search for</label>
+                        <input type='search' class='form-control input-lg' name='search' id='streamerSearch' autofocus placeholder='Search all channels..'>
+                        <button class='btn-search btn-default btn-lg' id='search'><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+    
+                <div class='col-md-3 col-sm-6 col-xs-6'></div>
+    
+            </div>
+  
+            <div class='row'>
+                <div class='col-md-3'></div>
+                <div class='col-md-6'>
+                    <div class='messages pull-left'>
+                        <span id='info' class='reload pull-left'></span>
+                    </div>
+                    <div class='filter pull-right btn-group' role='group'>
+                        <button type='button' id='btn-all' class='btn-filter btn-default'>All</button>
+                        <button type='button' id='btn-online' class='btn-filter btn-default' data-target='#online'>Online</button>
+                        <button type='button' id='btn-offline' class='btn-filter btn-default'>Offline</button>
+                    </div>
+                </div>
+                <div class='col-md-3'></div>
+            </div>
+
+            <div class='row'>
+                <div class='col-md-3'></div>
+                <div class='col-md-6'>
+                    <div id='error'></div> <!-- for error message display -->
+                    <table class='table table-condensed'>
+                        <tbody id='display'> <!-- display results here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> <!-- container end -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    </body>
+
+</html>
